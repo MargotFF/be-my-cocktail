@@ -9,26 +9,31 @@ puts 'Destroying cocktails...'
 Cocktail.destroy_all
 puts 'Cocktails destroyed!'
 
-puts 'Creating cocktails...'
-
-mojito = Cocktail.create(name: 'Mojito')
-pisco_sour = Cocktail.create(name: 'Pisco Sour')
-bloody_mary = Cocktail.create(name: 'Bloody Mary')
-
-puts 'Cocktails created!'
-
 puts 'Destroying ingredients...'
 Ingredient.destroy_all
 puts 'Ingredients destroyed!'
+
+puts 'Destroying doses...'
+Dose.destroy_all
+puts 'Doses destroyed!'
+
+puts 'Creating cocktails...'
+
+mojito = Cocktail.create(name: 'Mojito', description: 'The Mojito might be Cuba’s most popular contribution to cocktail culture. The simple mix of white rum, lime juice, cane sugar, and soda (with muddled mint, please) is fresh and tropical, and it’s a classic.')
+pisco_sour = Cocktail.create(name: 'Pisco Sour', description: 'The Pisco Sour, made with the Peruvian and Chilean national spirit pisco, along with lime, sugar, and an optional egg white, is appropriate for any occasion.')
+bloody_mary = Cocktail.create(name: 'Bloody Mary', description: 'The Bloody Mary is as much an experience as a drink. The brunch-time staple is best enjoyed with a house mix of tomato juice, vodka, and spices.')
+gin_tonic = Cocktail.create(name: 'Gin Tonic', description: "Classic and easy, the gin and tonic (or G&T) is light and refreshing. It's a simple mixed drink that requires just the two named ingredients and a hint of lime, all of which are natural flavor companions.")
+
+puts 'Cocktails created!'
 
 puts 'Creating ingredients...'
 
 rum = Ingredient.create(name: 'rum')
 soda_water = Ingredient.create(name: 'soda water')
-lemon = Ingredient.create(name: 'lemon')
+lime = Ingredient.create(name: 'lime')
 ice = Ingredient.create(name: 'ice')
 mint_leaves = Ingredient.create(name: 'mint leaves')
-sugar = Ingredient.create(name: 'sugar')
+sugar_syrup = Ingredient.create(name: 'sugar syrup')
 pisco = Ingredient.create(name: 'pisco')
 egg_white = Ingredient.create(name: 'egg white')
 vodka = Ingredient.create(name: 'vodka')
@@ -38,10 +43,6 @@ gin = Ingredient.create(name: 'gin')
 tonic = Ingredient.create(name: 'tonic')
 
 puts 'Ingredients created!'
-
-puts 'Destroying doses...'
-Dose.destroy_all
-puts 'Doses destroyed!'
 
 puts 'Creating doses...'
 

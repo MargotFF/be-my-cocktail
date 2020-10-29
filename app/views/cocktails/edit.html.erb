@@ -1,0 +1,7 @@
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.submit "Update the cocktail", class: "btn btn-warning" %>
+<% end %>
+
+<%= link_to "Cancel", cocktail_path(@cocktail), class: "btn btn-primary" %>
