@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'json'
+require 'open-uri'
+
 puts 'Destroying cocktails...'
 Cocktail.destroy_all
 puts 'Cocktails destroyed!'
@@ -30,60 +33,70 @@ puts 'Cocktails created!'
 
 puts 'Creating ingredients...'
 
-rum = Ingredient.create(name: 'rum')
-soda_water = Ingredient.create(name: 'soda water')
-lime = Ingredient.create(name: 'lime')
+# rum = Ingredient.create(name: 'rum')
+# soda_water = Ingredient.create(name: 'soda water')
+# lime = Ingredient.create(name: 'lime')
 ice = Ingredient.create(name: 'ice')
 mint_leaves = Ingredient.create(name: 'mint leaves')
-sugar_syrup = Ingredient.create(name: 'sugar syrup')
-pisco = Ingredient.create(name: 'pisco')
+# sugar_syrup = Ingredient.create(name: 'sugar syrup')
+# pisco = Ingredient.create(name: 'pisco')
 egg_white = Ingredient.create(name: 'egg white')
-vodka = Ingredient.create(name: 'vodka')
-tomato_juice = Ingredient.create(name: 'tomato juice')
+# vodka = Ingredient.create(name: 'vodka')
+# tomato_juice = Ingredient.create(name: 'tomato juice')
 tabasco = Ingredient.create(name: 'tabasco')
-gin = Ingredient.create(name: 'gin')
+# gin = Ingredient.create(name: 'gin')
 tonic = Ingredient.create(name: 'tonic')
-pineapple_juice = Ingredient.create(name: 'pineapple juice')
+# pineapple_juice = Ingredient.create(name: 'pineapple juice')
 coconut_cream = Ingredient.create(name: 'coconut cream')
-tequila = Ingredient.create(name: 'tequila')
-triple_sec = Ingredient.create(name: 'triple sec')
+# tequila = Ingredient.create(name: 'tequila')
+# triple_sec = Ingredient.create(name: 'triple sec')
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+data_hash = JSON.parse(open(url).read)
+
+data_hash['drinks'].each do |ingredient|
+  Ingredient.create(name: ingredient['strIngredient1'])
+end
+
+
+
 
 puts 'Ingredients created!'
 
 puts 'Creating doses...'
 
 Dose.create(description: 'large handful', cocktail: mojito, ingredient: ice)
-Dose.create(description: '1/2', cocktail: mojito, ingredient: lime)
-Dose.create(description: '20 ml', cocktail: mojito, ingredient: sugar_syrup)
+Dose.create(description: '1/2', cocktail: mojito, ingredient_id: 36)
+Dose.create(description: '20 ml', cocktail: mojito, ingredient_id: 55)
 Dose.create(description: '6', cocktail: mojito, ingredient: mint_leaves)
-Dose.create(description: '60 ml', cocktail: mojito, ingredient: rum)
-Dose.create(description: 'to top', cocktail: mojito, ingredient: soda_water)
+Dose.create(description: '60 ml', cocktail: mojito, ingredient_id: 46)
+Dose.create(description: 'to top', cocktail: mojito, ingredient_id: 39)
 
 Dose.create(description: 'large handful', cocktail: pisco_sour, ingredient: ice)
-Dose.create(description: '30 ml', cocktail: pisco_sour, ingredient: lime)
-Dose.create(description: '20 ml', cocktail: pisco_sour, ingredient: sugar_syrup)
+Dose.create(description: '30 ml', cocktail: pisco_sour, ingredient_id: 36)
+Dose.create(description: '20 ml', cocktail: pisco_sour, ingredient_id: 55)
 Dose.create(description: '1', cocktail: pisco_sour, ingredient: egg_white)
-Dose.create(description: '50 ml', cocktail: pisco_sour, ingredient: pisco)
+Dose.create(description: '50 ml', cocktail: pisco_sour, ingredient_id: 95)
 
 Dose.create(description: 'large handful', cocktail: bloody_mary, ingredient: ice)
-Dose.create(description: '1/2', cocktail: bloody_mary, ingredient: lime)
+Dose.create(description: '1/2', cocktail: bloody_mary, ingredient_id: 36)
 Dose.create(description: '3 dashes', cocktail: bloody_mary, ingredient: tabasco)
-Dose.create(description: '40 ml', cocktail: bloody_mary, ingredient: vodka)
-Dose.create(description: '120 ml', cocktail: bloody_mary, ingredient: tomato_juice)
+Dose.create(description: '40 ml', cocktail: bloody_mary, ingredient_id: 28)
+Dose.create(description: '120 ml', cocktail: bloody_mary, ingredient_id: 67)
 
 Dose.create(description: 'large handful', cocktail: gin_tonic, ingredient: ice)
-Dose.create(description: 'a wedge', cocktail: gin_tonic, ingredient: lime)
-Dose.create(description: '50 ml', cocktail: gin_tonic, ingredient: gin)
+Dose.create(description: 'a wedge', cocktail: gin_tonic, ingredient_id: 62)
+Dose.create(description: '50 ml', cocktail: gin_tonic, ingredient_id: 9)
 Dose.create(description: '150 ml', cocktail: gin_tonic, ingredient: tonic)
 
 Dose.create(description: 'large handful', cocktail: pina_colada, ingredient: ice)
-Dose.create(description: '60 ml', cocktail: pina_colada, ingredient: rum)
-Dose.create(description: '120 ml', cocktail: pina_colada, ingredient: pineapple_juice)
+Dose.create(description: '60 ml', cocktail: pina_colada, ingredient_id: 46)
+Dose.create(description: '120 ml', cocktail: pina_colada, ingredient_id: 53)
 Dose.create(description: '60 ml', cocktail: pina_colada, ingredient: coconut_cream)
 
 Dose.create(description: 'large handful', cocktail: margarita, ingredient: ice)
-Dose.create(description: '25 ml', cocktail: margarita, ingredient: lime)
-Dose.create(description: '50 ml', cocktail: margarita, ingredient: tequila)
-Dose.create(description: '20 ml', cocktail: margarita, ingredient: triple_sec)
+Dose.create(description: '25 ml', cocktail: margarita, ingredient_id: 36)
+Dose.create(description: '50 ml', cocktail: margarita, ingredient_id: 27)
+Dose.create(description: '20 ml', cocktail: margarita, ingredient_id: 15)
 
 puts 'Doses created!'

@@ -1,8 +1,10 @@
 <h1>Mister Cocktail</h1>
+<p>"There's always time for a cocktail"</p>
 
 <% @cocktails.each do |cocktail| %>
   <div>
     <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <%= link_to "", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure ?" }, class:"fas fa-trash-alt" %>
   </div>
 <% end %>
 
