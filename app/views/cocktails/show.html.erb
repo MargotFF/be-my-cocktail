@@ -1,16 +1,30 @@
-<h2><%= @cocktail.name %></h2>
-<p><%= @cocktail.description %></p>
-<%= link_to "", edit_cocktail_path, class:"fas fa-edit" %>
+<div class="show-card">
+  <div class="thumbnail"><img class="left" src="https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/></div>
+  <div class="right">
+    <div class="show-title">
+      <h2><%= @cocktail.name %></h2>
+      <div class="show-title-icons">
+        <%= link_to "", edit_cocktail_path, class:"fas fa-edit edit-icon" %>
+        <%= link_to "", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure ?" }, class:"fas fa-trash-alt trash-icon" %>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <ul>
+      <% @cocktail.doses.each do |dose| %>
+        <li class="ingredients-list">
+          <strong><%= dose.ingredient.name.capitalize %><strong> - <%= dose.description %>
+          <%= link_to "", edit_dose_path(dose), class:"fas fa-edit edit-icon" %>
+          <%= link_to "", dose_path(dose), method: :delete, data: { confirm: "Are you sure ?" }, class:"fas fa-trash-alt trash-icon" %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail), class: "btn-add" %>
+  </div>
+  <div class="bottom">
+    <p><%= @cocktail.description %></p>
+  </div>
+  <%= link_to "Back to cocktails", root_path, class: "btn-back" %>
+</div>
 
-<ul class="list-group">
-  <% @cocktail.doses.each do |dose| %>
-    <li class="list-group-item">
-      <%= dose.ingredient.name.capitalize %> - <%= dose.description %>
-      <%= link_to "", edit_dose_path(dose), class:"fas fa-edit" %>
-      <%= link_to "", dose_path(dose), method: :delete, data: { confirm: "Are you sure ?" }, class:"fas fa-trash-alt" %>
-    </li>
-  <% end %>
-</ul>
 
-<%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-warning" %>
-<%= link_to "Back to cocktails", root_path, class: "btn btn-primary" %>
+

@@ -1,11 +1,23 @@
-<h1>Mister Cocktail</h1>
-<p>"There's always time for a cocktail"</p>
-
-<% @cocktails.each do |cocktail| %>
-  <div>
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    <%= link_to "", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure ?" }, class:"fas fa-trash-alt" %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/4295/black-and-white-alcohol-bar-drinks.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="container">
+    <h1>Find your perfect <span class="pink-text">cocktail</span> !</h1>
+    <p><em>“No amount of physical contact could match the healing powers of<br>a well made cocktail.”</em>&nbsp;&nbsp;&nbsp;- David Sedaris</p>
   </div>
-<% end %>
+</div>
 
-<%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-warning" %>
+<div class="home-cards-list">
+  <div class="container">
+    <h2>Discover our finest selection</h2>
+      <div class="home-cards">
+        <% @cocktails.each do |cocktail| %>
+          <%= link_to cocktail_path(cocktail) do %>
+            <div class="home-card">
+              <div class="home-card-content">
+                <h4><%= cocktail.name %></h4>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+  </div>
+</div>

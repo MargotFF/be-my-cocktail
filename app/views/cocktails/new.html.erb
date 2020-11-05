@@ -1,7 +1,14 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.submit "Create the cocktail", class: "btn btn-warning" %>
-<% end %>
+<div class="container form">
+  <img src="https://images.pexels.com/photos/1838611/pexels-photo-1838611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+  <div class="form-content">
+    <h2>Create your own cocktail !</h2>
+    <%= simple_form_for(@cocktail) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.submit "Create the cocktail", class: "btn-add" %>
+      <%= link_to "Cancel", root_path, class: "btn-cancel" %>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to "Cancel", root_path, class: "btn btn-primary" %>
+

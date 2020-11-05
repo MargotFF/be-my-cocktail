@@ -1,0 +1,82 @@
+.btn-home {
+  color: white;
+  background-color: $color_pink;
+  font-family: $headers-font;
+  font-size: 24px;
+  padding: 4px 18px;
+  border-radius: 5px;
+  font-weight: lighter;
+  &:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  }
+}
+
+.btn-add {
+  color: white;
+  background-color: $color_pink;
+  font-family: $headers-font;
+  font-size: 24px;
+  padding: 4px 18px;
+  border-radius: 5px;
+  border: none;
+  font-weight: lighter;
+  &:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  }
+}
+
+.btn-back {
+  color: white;
+  background-color: $color_grey;
+  font-family: $headers-font;
+  font-size: 24px;
+  padding: 4px 18px;
+  border-radius: 5px;
+  font-weight: lighter;
+  &:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  }
+}
+
+.btn-cancel {
+  color: white;
+  background-color: $color_grey;
+  font-family: $headers-font;
+  font-size: 24px;
+  padding: 7px 18px;
+  border-radius: 5px;
+  font-weight: lighter;
+  &:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  }
+}
+
+.edit-icon {
+  color: $color_pink;
+  &:hover {
+    text-decoration: none;
+    color: $color_pink;
+    opacity: 0.8;
+  }
+}
+
+.trash-icon {
+  color: $color_grey;
+  &:hover {
+    text-decoration: none;
+    color: $color_pink;
+    opacity: 0.8;
+  }
+}

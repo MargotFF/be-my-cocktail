@@ -1,0 +1,31 @@
+.banner {
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 64px;
+    font-weight: bold;
+    text-align: right;
+    padding-bottom: 12px;
+    .pink-text {
+      color: $color_pink;
+    }
+  }
+  p {
+    font-size: 14px;
+    color: white;
+    opacity: 0.85;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    text-align: right;
+  }
+}
+
+
+

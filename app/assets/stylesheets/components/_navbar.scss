@@ -1,12 +1,17 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
+  display: flex;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+#logo-mr-cocktail {
+  height: 45px;
+  display: flex;
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+#main-title {
+  margin-left: 10px;
+  font-size: 34px;
+  color: $color_grey;
 }
