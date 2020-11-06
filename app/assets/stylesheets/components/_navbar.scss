@@ -1,6 +1,6 @@
 .navbar {
   justify-content: space-between;
-  background: white;
+  background: #FFF;
   display: flex;
 }
 
@@ -14,4 +14,5 @@
   margin-left: 10px;
   font-size: 34px;
   color: $color_grey;
+  margin-bottom: 6px;
 }

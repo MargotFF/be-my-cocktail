@@ -1,6 +1,6 @@
 .show-card {
   position: relative;
-  height: 440px;
+  height: 420px;
   width: 900px;
   margin: 90px auto;
   margin-bottom: 120px;
@@ -22,6 +22,7 @@
   top: -30px;
   height: 320px;
   width: 530px;
+  border-radius: 5px;
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
@@ -74,8 +75,8 @@ img.left {
   position: absolute;
   left: 30px;
   right: 300px;
-  top: 325px;
-  padding-right: 40px;
+  top: 315px;
+  width: 530px;
   p {
     font-size: 0.85rem;
     font-weight: bolder;

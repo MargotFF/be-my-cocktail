@@ -63,6 +63,22 @@
   }
 }
 
+.btn-search {
+  color: white;
+  background-color: $color_pink;
+  font-family: $headers-font;
+  padding: 5px 18px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  right: 0;
+  &:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  }
+}
+
 .edit-icon {
   color: $color_pink;
   &:hover {

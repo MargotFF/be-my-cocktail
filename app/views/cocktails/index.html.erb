@@ -2,6 +2,18 @@
   <div class="container">
     <h1>Find your perfect <span class="pink-text">cocktail</span> !</h1>
     <p><em>“No amount of physical contact could match the healing powers of<br>a well made cocktail.”</em>&nbsp;&nbsp;&nbsp;- David Sedaris</p>
+    <div class="search-bar">
+      <%= form_tag root_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "search-bar-form form-horizontal",
+          placeholder: "Type a cocktail"
+        %>
+        <%= button_tag type: 'submit', class: "btn-search" do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
@@ -9,13 +21,17 @@
   <div class="container">
     <h2>Discover our finest selection</h2>
       <div class="home-cards">
-        <% @cocktails.each do |cocktail| %>
-          <%= link_to cocktail_path(cocktail) do %>
-            <div class="home-card">
-              <div class="home-card-content">
-                <h4><%= cocktail.name %></h4>
+        <% if @cocktails.empty? %>
+          <p>No results found</p>
+        <% else %>
+          <% @cocktails.each do |cocktail| %>
+            <%= link_to cocktail_path(cocktail) do %>
+              <div class="home-card">
+                <div class="home-card-content">
+                  <h4><%= cocktail.name %></h4>
+                </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
         <% end %>
       </div>
