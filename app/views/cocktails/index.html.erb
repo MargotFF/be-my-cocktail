@@ -22,7 +22,9 @@
     <h2>Discover our finest selection</h2>
       <div class="home-cards">
         <% if @cocktails.empty? %>
-          <p>No results found</p>
+          <span class="no-results-text">
+            No results found...
+          </span>
         <% else %>
           <% @cocktails.each do |cocktail| %>
             <%= link_to cocktail_path(cocktail) do %>
