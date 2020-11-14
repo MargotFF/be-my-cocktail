@@ -1,6 +1,36 @@
+.form-new {
+  margin-top: 70px;
+  width: 820px;
+  height: 480px;
+  margin-bottom: 60px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: none;
+  position: relative;
+  background-color: #FFF;
+  display: flex;
+  position: relative;
+  .form-content {
+    position: absolute;
+    padding: 0 20px;
+    left: 350px;
+    h2 {
+      color: $color_grey;
+      font-size: 42px;
+      text-align: center;
+      padding: 30px 0;
+      flex-grow: 1;
+      }
+  }
+  img {
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+}
+
 .form {
   margin-top: 70px;
-  width: 700px;
+  width: 740px;
   height: 400px;
   margin-bottom: 60px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -27,6 +57,7 @@
     left: 0;
   }
 }
+
 
 
 

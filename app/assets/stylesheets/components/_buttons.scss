@@ -96,3 +96,31 @@
     opacity: 0.8;
   }
 }
+
+.btn-form {
+  margin-top: 10px;
+}
+
+.fa-arrow-circle-left {
+  position: absolute;
+  left: -100px;
+  top: 45%;
+  font-size: 48px;
+  color: $color_pink;
+  &:hover {
+    text-decoration: none;
+    color: $color_grey;
+  }
+}
+
+.fa-arrow-circle-right {
+  position: absolute;
+  right: -100px;
+  top: 45%;
+  font-size: 48px;
+  color: $color_pink;
+  &:hover {
+    text-decoration: none;
+    color: $color_grey;
+  }
+}

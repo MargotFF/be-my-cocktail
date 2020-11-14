@@ -1,5 +1,11 @@
 <div class="show-card">
-  <div class="thumbnail"><img class="left" src="https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/></div>
+  <div class="thumbnail">
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key %>
+    <% else %>
+      <%= image_tag "default_cocktail.jpg" %>
+    <% end %>
+  </div>
   <div class="right">
     <div class="show-title">
       <h2><%= @cocktail.name %></h2>
@@ -23,6 +29,8 @@
   <div class="bottom">
     <p><%= @cocktail.description %></p>
   </div>
+  <%= link_to "", @cocktail.previous, class: "fas fa-arrow-circle-left" if @cocktail.previous %>
+  <%= link_to "", @cocktail.next, class: "fas fa-arrow-circle-right" if @cocktail.next %>
   <%= link_to "Back to cocktails", root_path, class: "btn-back" %>
 </div>
 

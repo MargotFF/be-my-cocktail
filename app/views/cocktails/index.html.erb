@@ -29,6 +29,13 @@
           <% @cocktails.each do |cocktail| %>
             <%= link_to cocktail_path(cocktail) do %>
               <div class="home-card">
+                <div class="home-card-image">
+                  <% if cocktail.photo.attached? %>
+                    <%= cl_image_tag cocktail.photo.key %>
+                  <% else %>
+                    <%= image_tag "default_cocktail.jpg" %>
+                  <% end %>
+                </div>
                 <div class="home-card-content">
                   <h4><%= cocktail.name %></h4>
                 </div>

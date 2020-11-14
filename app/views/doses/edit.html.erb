@@ -5,7 +5,7 @@
     <%= simple_form_for(@dose) do |f| %>
       <%= f.association :ingredient %>
       <%= f.input :description %>
-      <%= f.submit "Save your changes", class: "btn-add" %>
+      <%= f.submit "Save your changes", class: "btn-add btn-form" %>
       <%= link_to "Cancel", cocktail_path(@dose.cocktail), class: "btn-cancel" %>
     <% end %>
   </div>
