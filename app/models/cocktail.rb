@@ -6,7 +6,7 @@ class Cocktail < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   def previous
-    Cocktail.where('id < ?', id).first
+    Cocktail.where('id < ?', id).last
   end
 
   def next
