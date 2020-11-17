@@ -1,0 +1,12 @@
+<div class="form-content review">
+  <h3>Leave a review</h3>
+  <%= simple_form_for [ @cocktail, Review.new ] do |f| %>
+    <%= f.input :rating, label: "Rate this cocktail !", as: :hidden %>
+    <% 5.times do |index| %>
+      <i id="<%= index + 1 %>" class="review-rating far fa-star"></i>
+    <% end %>
+    <%= f.input :content %>
+    <%= f.submit "Submit my review", class: "btn-add btn-form" %>
+  <% end %>
+</div>
+
