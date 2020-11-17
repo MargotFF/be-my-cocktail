@@ -1,3 +1,49 @@
 // Place all the styles related to the reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.reviews {
+  padding-top: 10px;
+  height: 230px;
+  overflow: scroll;
+  .reviews-header {
+    position: sticky;
+    top: 0;
+    h3 {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+    .separator {
+      margin-bottom: 16px;
+      border: 1px solid $color_pink;
+    }
+  }
+  .no-reviews-text {
+    background-color: $background;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: $color_grey;
+    font-size: 12px;
+  }
+  .review {
+    background: $background;
+    margin-top: 4px;
+    padding: 3px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .review-content-left {
+      p {
+        font-size: 10px;
+        color: $color_grey;
+        margin-bottom: 0;
+      }
+    }
+    .review-content-right {
+      .trash-icon {
+        font-size: 10px;
+        color: $color_grey;
+      }
+    }
+  }
+}

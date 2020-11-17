@@ -9,6 +9,7 @@
   background-color: #FFF;
   display: flex;
   position: relative;
+  overflow: hidden;
   .form-content {
     position: absolute;
     padding: 0 20px;
@@ -59,13 +60,23 @@
 }
 
 .fa-star {
-  color:  #FFD700;
-  cursor: pointer;
-  font-size: 18px;
+  font-size: 10px;
+  color: $color_pink;
   margin: 0 -2px;
 }
 
-.index.fa-star {
-  font-size: 12px;
+.form-review {
+  background: $background;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  margin-top: 80px;
+  .form-review-content {
+    font-size: 12px;
+    padding: 10px 15px;
+    h3 {
+      font-size: 24px;
+      padding-bottom: 5px;
+    }
+  }
 }
+
 

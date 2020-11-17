@@ -9,11 +9,8 @@ class ReviewsController < ApplicationController
     @cocktail = Cocktail.find(params[:cocktail_id])
     @review = Review.new(review_params)
     @review.cocktail = @cocktail
-    if @review.save
-      redirect_to cocktail_path(@cocktail, anchor: "review-#{@review.id}")
-    else
-      render 'cocktails/show'
-    end
+    @review.save
+    redirect_to cocktail_path(@cocktail, anchor: "review-#{@review.id}")
   end
 
   def destroy

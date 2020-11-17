@@ -1,9 +1,9 @@
 .show-card {
   position: relative;
-  height: 420px;
   width: 900px;
   margin: 90px auto;
   margin-bottom: 120px;
+  padding-bottom: 80px;
   background-color: #FFF;
   -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
@@ -41,7 +41,7 @@
 
 .right {
   margin-left: 590px;
-  margin-right: 20px;
+  margin-right: 35px;
   h2 {
   font-size: 40px;
   color: $color_grey;
@@ -76,6 +76,7 @@
   right: 300px;
   top: 315px;
   width: 530px;
+  margin-bottom: 20px;
   p {
     font-size: 0.85rem;
     font-weight: bolder;
