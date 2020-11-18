@@ -14,4 +14,8 @@ class Cocktail < ApplicationRecord
     Cocktail.where('id > ?', id).first
   end
 
+  def random
+    Cocktail.order('RANDOM()').first
+  end
+
 end

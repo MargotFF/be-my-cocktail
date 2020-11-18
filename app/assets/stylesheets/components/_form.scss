@@ -7,20 +7,27 @@
   border: none;
   position: relative;
   background-color: #FFF;
-  display: flex;
+  // display: flex;
   position: relative;
   overflow: hidden;
   .form-content {
     position: absolute;
     padding: 0 20px;
     left: 350px;
-    h2 {
-      color: $color_grey;
-      font-size: 42px;
-      text-align: center;
+    .form-content-title {
       padding: 30px 0;
-      flex-grow: 1;
+      h2 {
+        color: $color_grey;
+        font-size: 42px;
+        text-align: center;
+        // flex-grow: 1;
+        text-align: left;
+        }
+      .separator {
+        border: 1px solid $color_pink;
+        width: 380px;
       }
+    }
   }
   img {
     height: 100%;
@@ -38,19 +45,26 @@
   border: none;
   position: relative;
   background-color: #FFF;
-  display: flex;
+  // display: flex;
   position: relative;
   .form-content {
     position: absolute;
     padding: 0 20px;
     left: 300px;
-    h2 {
-      color: $color_grey;
-      font-size: 42px;
-      text-align: center;
+    .form-content-title {
       padding: 30px 0;
-      flex-grow: 1;
+      h2 {
+        color: $color_grey;
+        font-size: 42px;
+        text-align: center;
+        // flex-grow: 1;
+        text-align: left;
       }
+      .separator {
+        border: 1px solid $color_pink;
+        width: 340px;
+      }
+    }
   }
   img {
     height: 100%;
@@ -68,13 +82,21 @@
 .form-review {
   background: $background;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  margin-top: 80px;
+  margin-top: 60px;
   .form-review-content {
     font-size: 12px;
     padding: 10px 15px;
-    h3 {
-      font-size: 24px;
-      padding-bottom: 5px;
+    .form-review-title {
+      padding-bottom: 15px;
+      h3 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        color: $color_grey;
+    }
+      .separator {
+        border: 1px solid $color_pink;
+        width: 240px;
+      }
     }
   }
 }

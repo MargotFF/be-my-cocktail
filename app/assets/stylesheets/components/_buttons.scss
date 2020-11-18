@@ -63,10 +63,24 @@
   }
 }
 
-.btn-search {
+.btn-search-pink {
   color: white;
   background-color: $color_pink;
-  font-family: $headers-font;
+  padding: 5px 18px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  right: 0;
+  &:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  }
+}
+
+.btn-search-grey {
+  color: white;
+  background-color: $color_grey;
   padding: 5px 18px;
   border: none;
   border-top-right-radius: 5px;
@@ -141,3 +155,21 @@
   transition: opacity 0.3s ease;
   }
 }
+
+.fa-dice {
+font-size: 20px;
+background-color: $color_pink;
+padding: 7px 12px;
+border-radius: 5px;
+text-decoration: none;
+color: white;
+margin-top: 40px;
+margin-left: 10px;
+&:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  }
+}
+

@@ -1,6 +1,9 @@
 <div class="form-review">
   <div class="form-review-content">
-    <h3>Leave a review</h3>
+    <div class="form-review-title">
+      <h3>Leave a review</h3>
+      <div class="separator"></div>
+    </div>
     <%= simple_form_for [ @cocktail, @review ] do |f| %>
       <%= f.input :rating, collection: 0..5, label: "Rate this cocktail !" %>
       <%= f.input :content, label: "Your comment" %>

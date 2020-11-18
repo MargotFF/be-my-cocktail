@@ -3,30 +3,33 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .reviews {
-  padding-top: 10px;
-  height: 230px;
-  overflow: scroll;
+  padding-top: 20px;
   .reviews-header {
     position: sticky;
     top: 0;
     h3 {
       font-size: 24px;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      color: #233138;
     }
     .separator {
-      margin-bottom: 16px;
-      border: 1px solid $color_pink;
+      margin-bottom: 14px;
+      border: 1px solid #F94F6A;
     }
   }
+  // .reviews-list {
+  //   height: 160px;
+  //   overflow: scroll;
+  // }
   .no-reviews-text {
-    background-color: $background;
+    background-color: #fcf5e7;
     padding: 6px 12px;
     border-radius: 5px;
-    color: $color_grey;
+    color: #233138;
     font-size: 12px;
   }
   .review {
-    background: $background;
+    background: #fcf5e7;
     margin-top: 4px;
     padding: 3px 10px;
     display: flex;
@@ -35,14 +38,14 @@
     .review-content-left {
       p {
         font-size: 10px;
-        color: $color_grey;
+        color: #233138;
         margin-bottom: 0;
       }
     }
     .review-content-right {
       .trash-icon {
         font-size: 10px;
-        color: $color_grey;
+        color: #233138;
       }
     }
   }

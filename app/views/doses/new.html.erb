@@ -1,7 +1,10 @@
 <div class="container form">
   <img src="https://images.pexels.com/photos/5320052/pexels-photo-5320052.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
   <div class="form-content">
-    <h2>Add a new ingredient</h2>
+    <div class="form-content-title">
+      <h2>Add a new ingredient</h2>
+      <div class="separator"></div>
+    </div>
     <%= simple_form_for [ @cocktail, @dose ] do |f| %>
       <%= f.association :ingredient %>
       <%= f.input :description %>
