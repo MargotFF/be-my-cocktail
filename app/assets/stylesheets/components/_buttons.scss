@@ -9,8 +9,8 @@
   &:hover {
   color: white;
   text-decoration: none;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
   }
 }
 
@@ -26,8 +26,8 @@
   &:hover {
   color: white;
   text-decoration: none;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
   }
 }
 
@@ -42,7 +42,7 @@
   &:hover {
   color: white;
   text-decoration: none;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
   }
 }
@@ -58,7 +58,7 @@
   &:hover {
   color: white;
   text-decoration: none;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
   }
 }
@@ -73,8 +73,8 @@
   position: absolute;
   right: 0;
   &:hover {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
   }
 }
 
@@ -97,8 +97,9 @@
   color: $color_pink;
   &:hover {
     text-decoration: none;
-    color: $color_grey;
-    opacity: 0.8;
+    color: $color_pink;
+    filter: brightness(70%);
+    transition: filter 0.3s ease;
   }
 }
 
@@ -106,8 +107,9 @@
   color: $color_grey;
   &:hover {
     text-decoration: none;
-    color: $color_pink;
-    opacity: 0.8;
+    color: $color_grey;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
   }
 }
 
@@ -118,24 +120,28 @@
 .fa-arrow-circle-left {
   position: absolute;
   left: -100px;
-  top: 45%;
+  top: 300px;
   font-size: 48px;
   color: $color_pink;
   &:hover {
     text-decoration: none;
-    color: $color_grey;
+    color: $color_pink;
+    filter: brightness(80%);
+    transition: filter 0.3s ease;
   }
 }
 
 .fa-arrow-circle-right {
   position: absolute;
   right: -100px;
-  top: 45%;
+  top: 300px;
   font-size: 48px;
   color: $color_pink;
   &:hover {
     text-decoration: none;
-    color: $color_grey;
+    color: $color_pink;
+    filter: brightness(80%);
+    transition: filter 0.3s ease;
   }
 }
 
@@ -151,8 +157,8 @@
   &:hover {
   color: white;
   text-decoration: none;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
   }
 }
 
@@ -168,8 +174,8 @@ margin-left: 10px;
 &:hover {
   color: white;
   text-decoration: none;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
   }
 }
 

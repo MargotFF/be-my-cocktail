@@ -3,7 +3,9 @@
     <%= link_to root_path do %>
       <%= image_tag "logo.png", alt: "Logo Mister Cocktail", size: "45x45" %>
     <% end %>
-    <h1 id='main-title'>Mister Cocktail</h1>
+    <%= link_to root_path do %>
+      <h1 id='main-title'>BeMyCocktail.com</h1>
+    <% end %>
   </div>
   <%= link_to "Add your own cocktail", new_cocktail_path, class: "btn-home" %>
 </div>

@@ -1,8 +1,8 @@
 .form-new {
   margin-top: 70px;
   width: 820px;
-  height: 480px;
-  margin-bottom: 60px;
+  height: 500px;
+  margin-bottom: 140px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: none;
   position: relative;
@@ -12,7 +12,7 @@
   overflow: hidden;
   .form-content {
     position: absolute;
-    padding: 0 20px;
+    padding: 0 30px;
     left: 350px;
     .form-content-title {
       padding: 30px 0;
@@ -39,8 +39,8 @@
 .form {
   margin-top: 70px;
   width: 740px;
-  height: 400px;
-  margin-bottom: 60px;
+  height: 430px;
+  margin-bottom: 140px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: none;
   position: relative;
@@ -48,6 +48,7 @@
   // display: flex;
   position: relative;
   .form-content {
+    width: 380px;
     position: absolute;
     padding: 0 20px;
     left: 300px;

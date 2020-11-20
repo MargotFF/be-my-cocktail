@@ -4,6 +4,9 @@
   display: flex;
   opacity: 0.9;
   box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.1);
+  a {
+    text-decoration: none;
+  }
 }
 
 #logo-mr-cocktail {
@@ -18,3 +21,5 @@
   color: $color_grey;
   margin-bottom: 6px;
 }
+
+
