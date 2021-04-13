@@ -1,10 +1,11 @@
-# Be My Cocktail (Cocktail Manager)
+# Be My Cocktail 
 
-Application web de recettes de cocktails développé avec Ruby on Rails qui permet de : 
+__Cocktail Manager__   
+Application web de recettes de cocktails développée avec Ruby on Rails qui permet de : 
  - Consulter une liste de cocktails
  - Accéder aux informations d'un cocktail et à ses ingrédients 
  - Créer (modifier ou supprimer) son propre cocktail en ajoutant les ingrédients parmi une centaine proposés
  - Laisser un commentaire sur un cocktail    
 
-Site hébergée sur Heroku : https://be-my-cocktail.herokuapp.com/
+Site hébergé sur Heroku : https://be-my-cocktail.herokuapp.com/
 
