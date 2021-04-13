@@ -1,6 +1,7 @@
 # Be My Cocktail 
 
 __Cocktail Manager__   
+
 Application web de recettes de cocktails développée avec Ruby on Rails qui permet de : 
  - Consulter une liste de cocktails
  - Accéder aux informations d'un cocktail et à ses ingrédients 
